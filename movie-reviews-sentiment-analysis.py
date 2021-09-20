@@ -130,14 +130,15 @@ svc_grid.fit(train_x_vector, train_y)
 print(svc_grid.best_params_)
 print(svc_grid.best_estimator_)
 
-#Save model in SAV format
+## Save model with Pickle, load model, and test
 
-filename = 'movie_reviews_sentiment_analysis.sav'
+import pickle
+
+filename = 'movie_reviews_sentiment_analysis.pkl'
+
 pickle.dump(svc_grid, open(filename, 'wb'))
 
-#Load saved model and test
-
-filename = './movie_reviews_sentiment_analysis.sav'
+#Load and test saved model
 loaded_model = pickle.load(open(filename, 'rb'))
 
 review = ["This is pretty much the worse movie I have ever watched. It's completely thrash!"]
@@ -145,5 +146,3 @@ new_review = tfidf.transform(review)
 
 result = loaded_model.predict(new_review)
 print(result)
-
-#Convert SAV into JSON and binary format
