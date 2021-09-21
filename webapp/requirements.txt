@@ -1,4 +1,4 @@
-flask
-pandas
-sklearn
-gunicorn
+flask=2.0.1
+pandas=1.2.4
+sklearn=0.0
+gunicorn=20.1.0

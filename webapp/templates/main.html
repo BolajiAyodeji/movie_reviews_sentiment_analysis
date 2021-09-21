@@ -5,7 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Movie Reviews Sentiment Analysis</title>
-    <link rel="shortcut icon" type="image/jpg" href="https://www.bolajiayodeji.com/favicon.png"/>
+    <link
+      rel="shortcut icon"
+      type="image/jpg"
+      href="https://www.bolajiayodeji.com/favicon.png"
+    />
     <link
       href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
       rel="stylesheet"
@@ -19,10 +23,6 @@
         <div class="font-bold text-xl mb-2">
           Movie Reviews Sentiment Analysis
         </div>
-        <p class="text-gray-700 text-base">
-          A basic machine learning model that will predict whether a movie
-          review is positive or negative.
-        </p>
         <hr />
         <br />
 
@@ -48,6 +48,7 @@
               leading-tight
               focus:outline-none focus:shadow-outline
             "
+            required
           >
             <option></option>
             <option value="The Good Doctor">The Good Doctor</option>
@@ -69,7 +70,7 @@
           >
             Enter your review:
           </label>
-          <input
+          <textarea
             name="review"
             id="review"
             class="
@@ -84,9 +85,9 @@
               leading-tight
               focus:outline-none focus:shadow-outline
             "
-            type="text"
+            rows="5"
             required
-          />
+          ></textarea>
 
           <br />
 
