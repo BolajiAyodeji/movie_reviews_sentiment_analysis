@@ -68,6 +68,12 @@ test_x_vector = tfidf.transform(test_x)
 
 pd.DataFrame.sparse.from_spmatrix(train_x_vector,index=train_x.index,columns=tfidf.get_feature_names())
 
+#Save the vectorizer
+
+import pickle
+
+pickle.dump(tfidf, open("vectorizer.pkl", "wb"))
+
 #Testing the model using four classification models
 
 #Support Vector Machine (SVM)
@@ -130,9 +136,7 @@ svc_grid.fit(train_x_vector, train_y)
 print(svc_grid.best_params_)
 print(svc_grid.best_estimator_)
 
-## Save model with Pickle, load model, and test
-
-import pickle
+#Save model with Pickle, load model, and test
 
 filename = 'movie_reviews_sentiment_analysis.pkl'
 
