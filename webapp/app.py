@@ -25,5 +25,4 @@ def main():
         return(flask.render_template('main.html', predict_text=predict_text, movie=movie, result=prediction))
 
 if __name__ == '__main__':
-    app.config['TEMPLATES_AUTO_RELOAD'] = True
     app.run()
